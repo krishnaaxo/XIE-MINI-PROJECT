@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pneumonia Detector</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">      
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"> Pneumonia Detection Web App XIE</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
+</body>
+
+<footer>
+    <div class="foot">
+    <p>This is a deeplearning web app which helps to predict if a patient is having TB/pneumonia or not with the help of CNN(convolutional neural network).</p>
+    <p>This app is designed to analyze a chest x-ray and predict the results.</p>    
+    <p>In the results NEGATIVE is for Normal and POSITIVE is for Pneumonia</p> 
+    <p>The dataset  to train our model was taken from kaggle.The dataset has train and test dataset consisting of Normal and Pneumonia X-RAYS images which used for training CNN.</p>
+    <p>For our research purpose we have also referred the article by Antani SK at National Library of Medicine(NLM)</p> 
+    <ul> 
+        <li><a href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">Chest X-Ray Images (Pneumonia)</a></li>
+        <li><a href="https://lhncbc.nlm.nih.gov/publication/pub9931"></a>Tuberculosis Chest X-ray NLM</li>
+        
+    </ul>
+    <p>This is web app is built by Krishna More and Prathamesh Jawale</p> 
+    <b>GITHUB LINK <a href="https://github.com/krishnaaxo">Krishnaaxo</a></b>
+    </div>
+</footer>
+
+</html>
