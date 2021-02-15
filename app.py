@@ -38,8 +38,10 @@ def process_image(image):
         image = image.convert("RGB")
 
     # resize and convert to tensor
-    image = image.resize((96, 96))
+    image = image.resize((224,224))
+    
     image = img_to_array(image)
+    image=image/255
     image = preprocess_input(image)
     image = np.expand_dims(image, axis=0)
     return image
